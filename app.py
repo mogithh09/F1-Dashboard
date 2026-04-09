@@ -6,4 +6,7 @@ import streamlit as st
 ##title##
 st.image("https://logos-world.net/wp-content/uploads/2023/12/F1-Logo.png",width=200)
 st.title("F1 Summary Dasboard")
-st.write("Race summary")
+
+##sidebar##
+st.sidebar.write("Race Summary")
+
