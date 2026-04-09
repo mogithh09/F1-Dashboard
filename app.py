@@ -15,3 +15,4 @@ if page =="Race summary":
 else:
   st.header("Race stratergy")
 
+import fastf1
