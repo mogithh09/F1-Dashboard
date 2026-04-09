@@ -34,6 +34,6 @@ def fetchurl(selected_race, races):
       return url
 
 result_url=fetchurl(selected_race, races)
-st.write("Genrated Url:",["result_url"])
+st.write("Genrated Url:",result_url)
 
 
