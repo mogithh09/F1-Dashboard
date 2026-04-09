@@ -9,10 +9,12 @@ st.title("F1 Summary Dasboard")
 
 ##sidebar##
 st.sidebar.write("Navigation")
-page=st.sidebar.selectbox("Select option :",["Race summary","Race Stratergy"] )
+page=st.sidebar.selectbox("Select option :",["Race summary"] )
 if page =="Race summary":
   st.header("Race Summary")
-else:
-  st.header("Race stratergy")
-
+  import requests
+  url = "http://ergast.com/api/f1/2026.json"
+  response = requests.get(url)
+  data = response.json()
+  st.write(data)
 
