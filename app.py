@@ -4,6 +4,6 @@ import seaborn as sns
 import streamlit as st 
 
 ##title##
-st.image("https://wallpaperaccess.com/f1-logo",width=200)
+st.image("https://logos-world.net/wp-content/uploads/2023/12/F1-Logo.png",width=200)
 st.title("F1 Summary Dasboard")
 st.write("Race summary")
