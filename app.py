@@ -8,6 +8,10 @@ st.image("https://logos-world.net/wp-content/uploads/2023/12/F1-Logo.png",width=
 st.title("F1 Summary Dasboard")
 
 ##sidebar##
-st.sidebar.write("Race Summary")
-st.sidebar.dropbox("Select option :", Race summary,Race Stratergy)
+st.sidebar.write("Navigation")
+st.sidebar.selectbox("Select option :"["Race summary","Race Stratergy"] )
+if page=="Race summary":
+  st.header("Race Summary")
+else:
+  st.header("Race stratergy")
 
