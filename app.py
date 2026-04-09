@@ -13,7 +13,7 @@ page=st.sidebar.selectbox("Select option :",["Race summary"] )
 if page =="Race summary":
   st.header("Race Summary")
   import requests
-  url = "http://ergast.com/api/f1/2025.json"
+  url = "http://ergast.com/api/f1/2023.json"
   response = requests.get(url)
   data = response.json()
   st.write(data)
