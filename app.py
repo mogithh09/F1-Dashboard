@@ -9,5 +9,5 @@ st.title("F1 Summary Dasboard")
 
 ##sidebar##
 st.sidebar.write("Race Summary")
-st.sidebar.dropbox("Select option :" Race summary,Race Stratergy)
+st.sidebar.dropbox("Select option :", Race summary,Race Stratergy)
 
