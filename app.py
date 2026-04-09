@@ -13,8 +13,11 @@ page=st.sidebar.selectbox("Select option :",["Race summary"] )
 if page =="Race summary":
   st.header("Race Summary")
   import requests
-  url = "http://ergast.com/api/f1/2023.json"
+  url = "https://api.jolpi.ca/ergast/f1/2024.json"
   response = requests.get(url)
   data = response.json()
-  st.write(data)
+  races = data['MRData']['RaceTable']['Races']
+  race_names = [race['raceName'] for race in races]
+  selected_race = st.sidebar.selectbox("Select Race", race_names)
+  st.write("Selected Race:", selected_race)
 
