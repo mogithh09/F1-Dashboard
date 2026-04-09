@@ -22,4 +22,17 @@ if page =="Race summary":
     race_names.append(race['raceName'])
   selected_race = st.sidebar.selectbox("Select Race", race_names)
   st.write("Selected Race:", selected_race)
+else:
+  pass
+
+##race winners##
+def fetchurl(selected_race, races):
+  for race in races:
+    if race['raceName'] == selected_race:
+      roundno = race['round']
+      url=f"https://api.jolpi.ca/ergast/f1/2024/{roundno}/results.json"
+      return url
+
+    
+
 
