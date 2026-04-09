@@ -9,7 +9,7 @@ st.title("F1 Summary Dasboard")
 
 ##sidebar##
 st.sidebar.write("Navigation")
-st.sidebar.selectbox("Select option :",["Race summary","Race Stratergy"] )
+page=st.sidebar.selectbox("Select option :",["Race summary","Race Stratergy"] )
 if page =="Race summary":
   st.header("Race Summary")
 else:
