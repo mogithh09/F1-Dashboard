@@ -1,5 +1,5 @@
-pandas 
-numpy
+fastf1==3.3.6
+numpy==1.26.4
+pandas
 seaborn
 streamlit
-fastf1
