@@ -18,5 +18,5 @@ else:
 import fastf1
 year=2026
 schedule=fastf1.get_event_schedule(year)
-st.selectbox("2026 Races :"{schedule}
+st.selectbox("2026 Races :"{schedule})
 
