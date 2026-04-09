@@ -18,7 +18,7 @@ if page =="Race summary":
   data = response.json()
   races = data['MRData']['RaceTable']['Races']
   race_names = []
-  for each race:
+  for each races:
     race_names.append(race['raceName'])
   selected_race = st.sidebar.selectbox("Select Race", race_names)
   st.write("Selected Race:", selected_race)
