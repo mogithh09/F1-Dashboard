@@ -33,14 +33,14 @@ def fetchurl(selected_race, races):
       url=f"https://api.jolpi.ca/ergast/f1/2024/{roundno}/results.json"
       return url
 
-result_url=fetchurl(selected_race, races)
-st.write("Genrated Url:",result_url)
-
-postion={}
-if race['racename']==selected_race:
-  for postion in url:
-    postion={givenname}
-else:
-  pass 
-for postion in url:
-  
+positions = []
+for race in races:
+    if race['raceName'] == selected_race:
+        response = requests.get(result_url)
+        data = response.json()
+        top3 = data['MRData']['RaceTable']['Races'][0]['Results'][:3]
+        
+        for result in top3:
+            positions.append(result['Driver']['givenName'])
+for p in positions:
+    st.write(p)
