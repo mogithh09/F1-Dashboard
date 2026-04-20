@@ -36,4 +36,3 @@ def fetchurl(selected_race, races):
 result_url=fetchurl(selected_race, races)
 st.write("Genrated Url:",result_url)
 
-
