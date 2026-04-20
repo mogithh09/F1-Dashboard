@@ -36,3 +36,11 @@ def fetchurl(selected_race, races):
 result_url=fetchurl(selected_race, races)
 st.write("Genrated Url:",result_url)
 
+postion={}
+if race['racename']==selected_race:
+  for postion in url:
+    postion={givenname}
+else:
+  pass 
+for postion in url:
+  
