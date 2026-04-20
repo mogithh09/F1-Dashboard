@@ -34,7 +34,7 @@ def fetchurl(selected_race, races):
       return url
 
 url = fetchurl(selected_race, races)
-st.write('Genrated Url',url)
+st.write('Generated Url', url)
 if url:
   response = requests.get(url)
   data = response.json()
@@ -44,7 +44,7 @@ if url:
     top3 = results[:3]
     for r in top3:
       st.write(r['Driver']['givenName'])
-  elif:
+  else:
     st.error("No race data found")
   else:
     st.error("Invalid race selection")
