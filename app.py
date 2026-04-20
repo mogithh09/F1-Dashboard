@@ -44,7 +44,7 @@ if url:
     top3 = results[:3]
     for r in top3:
       st.write(r['Driver']['givenName'])
-  else:
+  elif:
     st.error("No race data found")
   else:
     st.error("Invalid race selection")
