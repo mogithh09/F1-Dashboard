@@ -36,19 +36,6 @@ def fetchurl(selected_race, races):
 fetchedurl=fetchurl(selected_race,races)
 st.write('Genrated Url',fetchedurl)
 
-positions = []
-for race in races:
-    if race['raceName'] == selected_race:
-      top3 = race['Results'][:3]  
-      for result in top3:
-        positions.append(result['Driver']['givenName'])
-for p in positions:
-    st.write(p)
-
-
-for results in fetchedurl:
-  top3=race['Results'][:3]
-  for results in top3:
-    positions.append(result['Driver']['givenName'])
-  for p in postions:
-    st.write(p)
+top3 = data['MRData']['RaceTable']['Races'][0]['Results'][:3]
+for result in top3:
+  st.write(result['Driver']['givenName'])
