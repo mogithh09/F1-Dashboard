@@ -44,3 +44,11 @@ for race in races:
         positions.append(result['Driver']['givenName'])
 for p in positions:
     st.write(p)
+
+
+for results in fetchedurl:
+  top3=race['Results'][:3]
+  for results in top3:
+    positions.append(result['Driver']['givenName'])
+  for p in postions:
+    st.write(p)
