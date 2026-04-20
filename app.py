@@ -4,7 +4,7 @@ import seaborn as sns
 import streamlit as st 
 
 ##title##
-st.image("https://wallpaperaccess.com/download/f1-logo-2180256",width=400)
+st.image("https://wallpaperaccess.com/download/formula-1-logo-6122403",width=300)
 st.title("F1 Summary Dasboard")
 
 ##sidebar##
