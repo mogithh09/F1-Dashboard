@@ -39,12 +39,12 @@ if url:
   response = requests.get(url)
   data = response.json()
   races_data = data['MRData']['RaceTable']['Races']
-  if races_data:
-    results = races_data[0].get('Results', [])
-    top3 = results[:3]
-    for r in top3:
-      st.write(r['Driver']['givenName'])
-  else:
-    st.error("No race data found")
-  else:
-    st.error("Invalid race selection")
+     if races_data:
+       results = races_data[0].get('Results', [])
+       top3 = results[:3]
+       for r in top3:
+         st.write(r['Driver']['givenName'])
+     else:
+       st.error("No race data found")
+else:
+st.error("Invalid race selection")
