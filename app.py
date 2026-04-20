@@ -33,6 +33,9 @@ def fetchurl(selected_race, races):
       url=f"https://api.jolpi.ca/ergast/f1/2024/{roundno}/results.json"
       return url
 
+fetchedurl=fetchurl(selected_race,races)
+st.write('Genrated Url',fetchedurl)
+
 positions = []
 for race in races:
     if race['raceName'] == selected_race:
