@@ -36,11 +36,8 @@ def fetchurl(selected_race, races):
 positions = []
 for race in races:
     if race['raceName'] == selected_race:
-        response = requests.get(url)
-        data = response.json()
-        top3 = data['MRData']['RaceTable']['Races'][0]['Results'][:3]
-        
-        for result in top3:
-            positions.append(result['Driver']['givenName'])
+      top3 = race['Results'][:3]  
+      for result in top3:
+        positions.append(result['Driver']['givenName'])
 for p in positions:
     st.write(p)
