@@ -33,9 +33,18 @@ def fetchurl(selected_race, races):
       url=f"https://api.jolpi.ca/ergast/f1/2024/{roundno}/results.json"
       return url
 
-fetchedurl=fetchurl(selected_race,races)
-st.write('Genrated Url',fetchedurl)
-
-top3 = data['MRData']['RaceTable']['Races'][0]['Results'][:3]
-for result in top3:
-  st.write(result['Driver']['givenName'])
+url = fetchurl(selected_race, races)
+st.write('Genrated Url',url)
+if url:
+  response = requests.get(url)
+  data = response.json()
+  races_data = data['MRData']['RaceTable']['Races']
+  if races_data:
+    results = races_data[0].get('Results', [])
+    top3 = results[:3]
+    for r in top3:
+      st.write(r['Driver']['givenName'])
+  else:
+    st.error("No race data found")
+  else:
+    st.error("Invalid race selection")
