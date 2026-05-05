@@ -26,25 +26,34 @@ else:
   pass
 
 ##race winners##
+
 def fetchurl(selected_race, races):
-  for race in races:
-    if race['raceName'] == selected_race:
-      roundno = race['round']
-      url=f"https://api.jolpi.ca/ergast/f1/2024/{roundno}/results.json"
-      return url
+    for race in races:
+        if race['raceName'] == selected_race:
+            roundno = race['round']
+            url = f"https://api.jolpi.ca/ergast/f1/2024/{roundno}/results.json"
+            return url
+
 
 url = fetchurl(selected_race, races)
+
 st.write('Generated Url', url)
+
 if url:
-  response = requests.get(url)
-  data = response.json()
-  races_data = data['MRData']['RaceTable']['Races']
-     if races_data:
-       results = races_data[0].get('Results', [])
-       top3 = results[:3]
-       for r in top3:
-         st.write(r['Driver']['givenName'])
-     else:
-       st.error("No race data found")
+    response = requests.get(url)
+    data = response.json()
+
+    races_data = data['MRData']['RaceTable']['Races']
+
+    if races_data:
+        results = races_data[0].get('Results', [])
+        top3 = results[:3]
+
+        for r in top3:
+            st.write(r['Driver']['givenName'])
+
+    else:
+        st.error("No race data found")
+
 else:
-st.error("Invalid race selection")
+    st.error("Invalid race selection")
