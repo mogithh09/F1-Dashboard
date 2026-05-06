@@ -197,6 +197,32 @@ if page =="Race summary":
 else:
   pass
 
+
+
+##Track info## 
+def get_circuit_id(selected_race, races):
+    for race in races:
+        if race['raceName'] == selected_race:
+            return race['Circuit']['circuitId']
+
+circuit_id = get_circuit_id(selected_race, races)
+info = track_data.get(circuit_id)
+st.subheader("🏁 Track Info")
+
+if info:
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.image(info["image"])
+
+    with col2:
+        st.write(info["name"])
+        st.write(info["location"])
+        st.write("Length:", info["length"])
+        st.write("Corners:", info["corners"])
+
+
+
 ##race winners##
 
 def fetchurl(selected_race, races):
@@ -208,8 +234,6 @@ def fetchurl(selected_race, races):
 
 
 url = fetchurl(selected_race, races)
-
-st.write('Generated Url', url)
 
 if url:
     response = requests.get(url)
