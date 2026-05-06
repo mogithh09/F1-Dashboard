@@ -217,7 +217,7 @@ if info:
 
     with col2:
         st.write(f"###{info ['name']}")
-        st.write(info["📍location"])
+        st.write("📍",info["location"])
         st.write("Length:", info["length"])
         st.write("Corners:", info["corners"])
 
