@@ -217,9 +217,9 @@ if info:
 
     with col2:
         st.markdown(f"### {info['name']}")
-        st.write("📍",info["location"])
-        st.write("Length:", info["length"])
-        st.write("Corners:", info["corners"])
+        st.write("📍🌍",info["location"])
+        st.metric("Length:", info["length"])
+        st.metric("Corners:", info["corners"])
 
 
 
