@@ -216,7 +216,7 @@ if info:
         st.image(info["image"])
 
     with col2:
-        st.write(infof"###["name"])
+        st.write(info f"###["name"])
         st.write(info["📍location"])
         st.write("Length:", info["length"])
         st.write("Corners:", info["corners"])
