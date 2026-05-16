@@ -213,6 +213,7 @@ if info:
     col1, col2 = st.columns(2)
 
     with col1:
+        st.write(circuit_id)
         image_path = f"{circuit_id}.webp"
         st.image(image_path, use_container_width=True)
 
