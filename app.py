@@ -215,7 +215,6 @@ if info:
     with col1:
         image_path = f"{circuit_id}.WEBP"
         st.image(image_path, use_container_width=True)
-        st.write(image_path)
 
     with col2:
         st.markdown(f"### {info['name']}")
