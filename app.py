@@ -214,7 +214,7 @@ if info:
 
     with col1:
         image_path = f"{circuit_id}.png"
-st.image(image_path, use_container_width=True)
+        st.image(image_path, use_container_width=True)
 
     with col2:
         st.markdown(f"### {info['name']}")
