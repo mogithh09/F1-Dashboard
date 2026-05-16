@@ -213,9 +213,9 @@ if info:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.write(image_path)
-        image_path = f"{circuit_id}.webp"
+        image_path = f"{circuit_id}.WEBP"
         st.image(image_path, use_container_width=True)
+        st.write(image_path)
 
     with col2:
         st.markdown(f"### {info['name']}")
