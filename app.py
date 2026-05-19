@@ -248,7 +248,7 @@ if url:
         p1 = top3[0]
         p2 = top3[1]
         p3 = top3[2]
-        st.write(p1['Drivers'])
+        st.write(p1['Driver'])
 
         for r in top3:
             st.write(r['Driver']['givenName'])
