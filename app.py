@@ -275,23 +275,23 @@ else:
 
 
 ##Fastest lap### 
-
+st.markdown("""
+<style>
+.fastest-lap-card {
+    background: #111111;
+    padding: 25px;
+    border-radius: 20px;
+    border: 3px solid #bb00ff;
+    box-shadow: 0 0 40px #bb00ff;
+}
+</style>
+""", unsafe_allow_html=True)
+st.markdown('<div class="fastest-lap-card">', unsafe_allow_html=True)
 time=results[0]['FastestLap']['Time']['time']
 st.header('🟣FASTEST LAP')
 driver=results[0]['Driver']['familyName']
 driver_img=f"{results[0]['Driver']['driverId']}.jpeg"
 col1,col2=st.columns([1,2])
-st.markdown("""
-<style>
-.fastest-lap-card {
-    background-color: #111111;
-    padding: 20px;
-    border-radius: 20px;
-    border: 2px solid #a020f0;
-    box-shadow: 0px 0px 25px rgba(160,32,240,0.8);
-}
-</style>
-""", unsafe_allow_html=True)
 with col1:
    st.image(driver_img, width=150)
 with col2:
