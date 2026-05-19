@@ -276,28 +276,11 @@ else:
 
 ##Fastest lap###
 
-st.markdown("""
-<style>
-.fastest-lap-card {
-    background: #111111;
-    padding: 25px;
-    border-radius: 20px;
-    border: 3px solid #bb00ff;
-    box-shadow: 0 0 40px #bb00ff;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown('<div class="fastest-lap-card">', unsafe_allow_html=True)
 
 time = results[0]['FastestLap']['Time']['time']
-
 driver = results[0]['Driver']['familyName']
-
 driver_img = f"{results[0]['Driver']['driverId']}.jpeg"
-
 st.markdown("## 🟣 FASTEST LAP")
-
 col1, col2 = st.columns([1,2])
 
 with col1:
