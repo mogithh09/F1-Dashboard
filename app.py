@@ -280,7 +280,7 @@ time=results[0]['FastestLap']['Time']['time']
 st.header('🟣FASTEST LAP')
 driver=results[0]['Driver']['familyName']
 driver_img=f"{results[0]['Driver']['driverId']}.jpeg"
-col1,col2=st.columns(2)
+col1,col2=st.columns([1,2])
 with col1:
    st.image(driver_img, width=150)
 with col2:
