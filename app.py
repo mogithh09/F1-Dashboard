@@ -262,6 +262,7 @@ if url:
         with col3:
             st.image(p3_img)
             st.markdown(f"## 🥉 {p3['Driver']['familyName']}")
+        st.write(results[0])
 
         for r in top3:
             st.write(r['Driver']['givenName'])
