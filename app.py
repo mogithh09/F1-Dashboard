@@ -278,4 +278,4 @@ else:
 
 time=results[0]['FastestLap']['Time']['time']
 st.header('🟣FASTEST LAP')
-
+st.write(p1,time)
