@@ -262,7 +262,7 @@ if url:
         with col3:
             st.image(p3_img)
             st.markdown(f"## 🥉 {p3['Driver']['familyName']}")
-        st.write(results[0])
+        
 
         for r in top3:
             st.write(r['Driver']['givenName'])
@@ -272,4 +272,10 @@ if url:
 
 else:
     st.error("Invalid race selection")
+
+
+##Fastest lap### 
+
+time=results[0]['FastestLap']['Time']['time']
+st.header(f"## '🟣FASTEST LAP')
 
