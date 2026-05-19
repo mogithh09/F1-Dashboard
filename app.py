@@ -274,7 +274,8 @@ else:
     st.error("Invalid race selection")
 
 
-##Fastest lap### 
+##Fastest lap###
+
 st.markdown("""
 <style>
 .fastest-lap-card {
@@ -286,15 +287,24 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
+
 st.markdown('<div class="fastest-lap-card">', unsafe_allow_html=True)
-time=results[0]['FastestLap']['Time']['time']
-st.markdown('## 🟣FASTEST LAP')
-driver=results[0]['Driver']['familyName']
-driver_img=f"{results[0]['Driver']['driverId']}.jpeg"
-col1,col2=st.columns([1,2])
+
+time = results[0]['FastestLap']['Time']['time']
+
+driver = results[0]['Driver']['familyName']
+
+driver_img = f"{results[0]['Driver']['driverId']}.jpeg"
+
+st.markdown("## 🟣 FASTEST LAP")
+
+col1, col2 = st.columns([1,2])
+
 with col1:
-   st.image(driver_img, width=150)
+    st.image(driver_img, width=150)
+
 with col2:
     st.subheader(driver)
     st.write(time)
+
 st.markdown('</div>', unsafe_allow_html=True)
