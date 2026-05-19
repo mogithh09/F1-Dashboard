@@ -245,6 +245,9 @@ if url:
     if races_data:
         results = races_data[0].get('Results', [])
         top3 = results[:3]
+        p1 = top3[0]
+        p2 = top3[1]
+        p3 = top3[2]
 
         for r in top3:
             st.write(r['Driver']['givenName'])
@@ -255,10 +258,7 @@ if url:
 else:
     st.error("Invalid race selection")
 
-results_list = results['MRData']['RaceTable']['Races'][0]['Results']
+st.write(p1['Drivers'])
 
-p1 = results_list[0]
-p2 = results_list[1]
-p3 = results_list[2]
-st.write(p1['Driver'])
-st.write(results)
+
+
