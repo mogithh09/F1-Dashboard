@@ -278,5 +278,7 @@ else:
 
 time=results[0]['FastestLap']['Time']['time']
 st.header('🟣FASTEST LAP')
-driver=results[0]['FastsstLap']['Driver']['FamilyName']
+driver=results[0]['FastestLap']['Driver']['FamilyName']
+st.write(['Driver']['driverId'].jpeg)
 st.write(driver,time)
+
