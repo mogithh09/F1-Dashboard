@@ -297,4 +297,4 @@ with col1:
 with col2:
     st.subheader(driver)
     st.write(time)
-
+st.markdown('</div>', unsafe_allow_html=True)
