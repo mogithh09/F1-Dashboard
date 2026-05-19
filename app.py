@@ -260,6 +260,10 @@ else:
     st.error("Invalid race selection")
 
 
+for r in results:
+    st.write(r['Driver']['driverId'])
+
+
 
 
 
