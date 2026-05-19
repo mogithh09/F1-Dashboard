@@ -284,6 +284,6 @@ col1,col2=st.columns(2)
 with col1:
    st.image(driver_img)
 with col2:
-    st.write(['Driver']['driverid'].jpeg)
-    st.write(driver,time)
+    st.subheader(driver)
+    st.write(time)
 
