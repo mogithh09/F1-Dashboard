@@ -248,7 +248,20 @@ if url:
         p1 = top3[0]
         p2 = top3[1]
         p3 = top3[2]
-        st.write(p1['Driver'])
+        p1_img = f"{p1['Driver']['driverId']}.jpeg"
+        p2_img = f"{p2['Driver']['driverId']}.jpeg"
+        p3_img = f"{p3['Driver']['driverId']}.jpeg"
+        st.subheader('🏆Podium')
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.image(p2_img)
+            st.markdown(f"## 🥈 {p2['Driver']['familyName']}")
+        with col2:
+            st.image(p1_img)
+            st.markdown(f"## 🥇 {p1['Driver']['familyName']}")
+        with col3:
+            st.image(p3_img)
+            st.markdown(f"## 🥉 {p3['Driver']['familyName']}")
 
         for r in top3:
             st.write(r['Driver']['givenName'])
@@ -258,12 +271,4 @@ if url:
 
 else:
     st.error("Invalid race selection")
-
-
-for r in results:
-    st.write(r['Driver']['driverId'])
-
-
-
-
 
