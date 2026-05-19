@@ -261,3 +261,4 @@ p1 = results_list[0]
 p2 = results_list[1]
 p3 = results_list[2]
 st.write(p1['Driver'])
+st.write(results)
