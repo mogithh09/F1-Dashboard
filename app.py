@@ -255,5 +255,9 @@ if url:
 else:
     st.error("Invalid race selection")
 
+results_list = results['MRData']['RaceTable']['Races'][0]['Results']
 
+p1 = results_list[0]
+p2 = results_list[1]
+p3 = results_list[2]
 st.write(p1['Driver'])
