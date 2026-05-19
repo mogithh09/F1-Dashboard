@@ -282,7 +282,7 @@ driver=results[0]['Driver']['familyName']
 driver_img=f"{results[0]['Driver']['driverId']}.jpeg"
 col1,col2=st.columns(2)
 with col1:
-   st.image(driver_img, width=50)
+   st.image(driver_img, width=150)
 with col2:
     st.subheader(driver)
     st.write(time)
