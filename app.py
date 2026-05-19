@@ -277,5 +277,5 @@ else:
 ##Fastest lap### 
 
 time=results[0]['FastestLap']['Time']['time']
-st.header(f"## {'🟣FASTEST LAP'})
+st.header('🟣FASTEST LAP')
 
