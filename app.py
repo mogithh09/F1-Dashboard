@@ -278,7 +278,12 @@ else:
 
 time=results[0]['FastestLap']['Time']['time']
 st.header('🟣FASTEST LAP')
-driver=results[0]['FastestLap']['Driver']['FamilyName']
-st.write(['Driver']['driverId'].jpeg)
-st.write(driver,time)
+driver=results[0]['Driver']['familyName']
+driver_img=f"{results[0]['Driver']['driverId']}.jpeg"
+col1,col2=st.columns(2)
+with col1:
+   st.image(driver_img)
+with col2:
+    st.write(['Driver']['driverId'].jpeg)
+    st.write(driver,time)
 
