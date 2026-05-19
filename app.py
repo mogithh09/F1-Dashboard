@@ -278,4 +278,5 @@ else:
 
 time=results[0]['FastestLap']['Time']['time']
 st.header('🟣FASTEST LAP')
-st.write(results[0]['Driver'],time)
+driver=results[0]['FastsstLap']['Driver']['FamilyName']
+st.write(driver,time)
