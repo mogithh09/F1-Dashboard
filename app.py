@@ -254,3 +254,6 @@ if url:
 
 else:
     st.error("Invalid race selection")
+
+
+st.write(p1['Driver'])
